@@ -13,6 +13,26 @@
             key-positions = <28 29>;
             layers = <2>;
         };
+
+        F7like {
+            bindings = <&kp F7>;
+            key-positions = <7 8>;
+        };
+
+        F10like {
+            bindings = <&kp F10>;
+            key-positions = <9 10>;
+        };
+
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <11 10>;
+        };
+
+        F2like {
+            bindings = <&kp F2>;
+            key-positions = <1 2>;
+        };
     };
 
     keymap {
