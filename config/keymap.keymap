@@ -118,5 +118,16 @@
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
+
+        layer_5 {
+            display-name = "Mouse";
+            bindings = <
+&kp ESC    &trans     &trans     &trans     &trans     &trans                                                      &trans       &trans     &trans     &trans    &trans                &trans
+&trans     &trans     &trans     &trans     &trans     &trans                                                      &trans       &trans     &trans     &trans    &trans                &trans
+&trans     &trans     &trans     &mkp RCLK  &mkp LCLK  &trans      &trans              &trans                      &trans       &mkp LCLK  &mkp RCLK  &trans    &trans                &trans
+&trans     &trans     &trans     &trans     &trans     &trans      &trans              &trans                      &trans       &trans     &trans     &trans    &trans                &trans
+&trans     &trans     &trans     &trans     &trans     &trans      &trans              &trans                      &trans       &trans     &trans     &trans    &trans                &trans
+            >;
+        };
     };
 };
