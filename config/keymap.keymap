@@ -38,13 +38,13 @@
             #binding-cells = <2>;
             bindings = <&to>, <&mo>;
         };
-        td_layer1: tap_dance_combo {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings =
-            <&layer_dual 2 0>,   // タップで 0、ホールドでレイヤ2
-            <&to>;    // 2回タップでレイヤへ移動
+        td_layer2_3: tap_dance_combo {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings =
+                <&layer_dual 0 2>,   // タップで 0、ホールドでレイヤ2
+                <&to 3>;             // 2回タップでレイヤ3へ移動
         };
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
             compatible = "zmk,behavior-hold-tap";
