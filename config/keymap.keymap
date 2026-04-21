@@ -42,9 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =
-                <&layer_dual 0 2>,   // タップで 0、ホールドでレイヤ2
-                <&to 3>;             // 2回タップでレイヤ3へ移動
+            bindings = <&layer_dual 0 2>, <&to 3>;
         };
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
             compatible = "zmk,behavior-hold-tap";
