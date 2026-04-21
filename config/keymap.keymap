@@ -36,6 +36,8 @@
         layer_dual: layer_dual {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
             bindings = <&to>, <&mo>;
         };
         td_layer2_3: tap_dance_combo {
