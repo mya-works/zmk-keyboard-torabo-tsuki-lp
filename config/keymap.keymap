@@ -132,6 +132,16 @@
             bindings = <&kp DELETE>;
             key-positions = <22 23>;
         };
+
+        Lang2 {
+            bindings = <&kp LANG2>;
+            key-positions = <33 34>;
+        };
+
+        Lang1 {
+            bindings = <&kp LANG1>;
+            key-positions = <28 27>;
+        };
     };
 
     keymap {
