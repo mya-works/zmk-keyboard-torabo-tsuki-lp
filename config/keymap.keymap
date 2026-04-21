@@ -59,24 +59,24 @@
             layers = <2>;
         };
 
+        F2like {
+            bindings = <&kp F2>;
+            key-positions = <13 14>;
+        };
+
         F7like {
             bindings = <&kp F7>;
-            key-positions = <7 8>;
+            key-positions = <19 20>;
         };
 
         F10like {
             bindings = <&kp F10>;
-            key-positions = <9 10>;
+            key-positions = <21 22>;
         };
 
-        del {
+        Delete {
             bindings = <&kp DELETE>;
-            key-positions = <11 10>;
-        };
-
-        F2like {
-            bindings = <&kp F2>;
-            key-positions = <1 2>;
+            key-positions = <22 23>;
         };
     };
 
