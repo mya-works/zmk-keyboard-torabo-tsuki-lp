@@ -173,17 +173,17 @@
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS         &kp MINUS                          &maru_kakko  &kaku_kakko  &chu_kakko      &none           &none            &trans
 &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK     &kp SLASH  &trans          &trans  &single      &double      &do             &kp UP_ARROW    &none            &trans
 &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp EQUAL  &kp KP_NUMLOCK  &trans  &none        &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans           &trans           &trans           &td_layer2_3     &trans     &trans          &trans  &kp TAB      &kp DEL      &trans          &trans          &trans           &trans
+&trans  &trans           &trans           &trans           &td_layer2_3     &trans     &bt BT_NXT      &trans  &kp TAB      &kp DEL      &trans          &trans          &trans           &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
+&trans  &trans            &trans            &trans            &trans            &trans                      &trans            &trans      &trans      &trans      &trans       &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                  &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(F10)  &trans
+&trans  &kp F1            &kp F2            &kp F3            &kp F4            &kp F5      &trans  &trans  &kp F6            &kp F7      &kp F8      &kp F9      &kp F10      &trans
+&trans  &kp F11           &kp F12           &out OUT_USB      &out OUT_BLE      &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT     &kp GRAVE   &kp TILDE   &kp PIPE     &trans
+&trans  &trans            &trans            &trans            &kp DELETE        &kp TAB     &trans  &trans  &trans            &trans      &trans      &trans      &trans       &trans
             >;
         };
     };
