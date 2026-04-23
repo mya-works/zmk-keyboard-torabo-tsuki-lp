@@ -224,7 +224,7 @@
 
             bindings = <&jp_at>, <&kp BSLH>;
         };
-        mt_jp_eq_bslh: mt_jp_at_bslh {
+        mt_jp_eq_bslh: mt_jp_eq_bslh {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
 
