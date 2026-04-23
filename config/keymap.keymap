@@ -221,7 +221,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";   // ←重要
 
-            bindings = <&jp_at &kp BSLH>;
+            bindings = <&jp_at &jp_backslash>;
         };
         mt_jp_eq_bslh: mt_jp_eq_bslh {
             compatible = "zmk,behavior-hold-tap";
@@ -230,7 +230,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";   // ←重要
 
-            bindings = <&jp_at &kp BSLH>;
+            bindings = <&jp_equal &jp_backslash>;
         };
         mt_jp_eq_caret: mt_jp_eq_caret {
             compatible = "zmk,behavior-hold-tap";
