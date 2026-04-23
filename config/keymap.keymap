@@ -182,6 +182,66 @@
             bindings = <&kp SLASH>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        jp_equal: jp_equal {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        mt_jp_colon_semicolon: mt_jp_colon_semicolon {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";   // ←重要
+
+            bindings = <&jp_colon>, <&jp_semicolon>;
+        };
+        mt_jp_lbracket_rbracket: mt_jp_lbracket_rbracket {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";   // ←重要
+
+            bindings = <&jp_lbracket>, <&jp_rbracket>;
+        };
+        mt_jp_slash_backslash: mt_jp_slash_backslash {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";   // ←重要
+
+            bindings = <&jp_slash>, <&jp_backslash>;
+        };
+        mt_jp_at_bslh: mt_jp_at_bslh {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";   // ←重要
+
+            bindings = <&jp_at>, <&kp BSLH>;
+        };
+        mt_jp_eq_bslh: mt_jp_at_bslh {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";   // ←重要
+
+            bindings = <&jp_at>, <&kp BSLH>;
+        };
+        mt_jp_eq_caret: mt_jp_eq_caret {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";   // ←重要
+
+            bindings = <&jp_equal>, <&jp_caret>;
+        };
     };
 
     combos {
