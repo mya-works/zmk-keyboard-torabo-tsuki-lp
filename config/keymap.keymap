@@ -102,6 +102,86 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
+        // @（通常） / `（Shift）
+        jp_at: jp_at {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp GRAVE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // :（通常） / *（Shift）
+        jp_colon: jp_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp ASTERISK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ;（通常） / +（Shift）
+        jp_semicolon: jp_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SEMI>, <&kp PLUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ^（通常） / ~（Shift）
+        jp_caret: jp_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // \（通常） / _（Shift）
+        jp_backslash: jp_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>, <&kp UNDERSCORE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // [（通常） / {（Shift）
+        jp_lbracket: jp_lbracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ]（通常） / }（Shift）
+        jp_rbracket: jp_rbracket {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // ,（通常） / <（Shift）
+        jp_comma: jp_comma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp LT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // .（通常） / >（Shift）
+        jp_dot: jp_dot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        // /（通常） / ?（Shift）
+        jp_slash: jp_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
