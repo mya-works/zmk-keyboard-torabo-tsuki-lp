@@ -36,7 +36,7 @@
         kaku_kakko: kaku_kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET>;
+            bindings = <&jp_lbracket &jp_rbracket>;
             label = "KAKU_KAKKO";
         };
 
