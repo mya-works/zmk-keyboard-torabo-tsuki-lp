@@ -95,7 +95,7 @@
         td_layers: td_layers {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
         //    bindings = <&to 0>, <&to 2>, <&to 3>;
             bindings = <&kp A>, <&kp B>, <&kp C>;
         };
