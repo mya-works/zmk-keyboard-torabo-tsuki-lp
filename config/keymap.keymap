@@ -95,9 +95,9 @@
         td_layers: td_layers {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
-        //    bindings = <&to 0>, <&to 2>, <&to 3>;
-            bindings = <&kp A>, <&kp B>, <&kp C>;
+            tapping-term-ms = <250>;
+            bindings = <&to 0>, <&to 2>, <&to 3>;
+        //    bindings = <&kp A>, <&kp B>, <&kp C>;
         };
 
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
