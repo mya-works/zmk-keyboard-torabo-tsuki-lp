@@ -92,6 +92,13 @@
             bindings = <&layer_dual 0 2>, <&to 3>;
         };
 
+        td_layers: td_layers {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to 0>, <&to 2>, <&to 3>;
+        };
+
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp &kp_exit_AML>;
