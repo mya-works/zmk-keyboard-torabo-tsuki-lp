@@ -96,7 +96,8 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&to 0>, <&to 2>, <&to 3>;
+        //    bindings = <&to 0>, <&to 2>, <&to 3>;
+            bindings = <&kp A>, <&kp B>, <&kp C>;
         };
 
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
@@ -191,7 +192,7 @@
         jp_equal: jp_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS &kp EQUAL>;
+            bindings = <&kp EQUAL &kp MINUSL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
