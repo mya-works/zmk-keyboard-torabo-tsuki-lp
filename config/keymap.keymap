@@ -312,11 +312,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans           &trans           &trans           &trans           &trans                             &trans       &trans       &trans          &trans          &trans           &trans
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS         &kp MINUS                          &maru_kakko  &kaku_kakko  &chu_kakko      &none           &none            &trans
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK     &kp SLASH  &trans          &trans  &single      &double      &do             &kp UP_ARROW    &none            &trans
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp EQUAL  &kp KP_NUMLOCK  &trans  &none        &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans           &trans           &trans           &td_layer2_3     &trans     &bt BT_NXT      &trans  &kp TAB      &kp DEL      &trans          &trans          &trans           &trans
+&trans  &trans           &trans           &trans           &trans           &trans                              &trans       &trans       &trans          &trans          &trans           &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS         &kp MINUS                           &maru_kakko  &kaku_kakko  &chu_kakko      &none           &none            &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK     &kp SLASH   &trans          &trans  &single      &double      &do             &kp UP_ARROW    &none            &trans
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp EQUAL   &kp KP_NUMLOCK  &trans  &none        &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans           &trans           &trans           &td_layer2_3     &bt BT_CLR  &bt BT_NXT      &trans  &kp TAB      &kp DEL      &trans          &trans          &trans           &trans
             >;
         };
 
