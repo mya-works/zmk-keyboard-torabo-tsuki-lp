@@ -192,7 +192,7 @@
         jp_equal: jp_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp MINUSL>;
+            bindings = <&kp EQUAL &kp MINUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
