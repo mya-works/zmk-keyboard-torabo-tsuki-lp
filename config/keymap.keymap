@@ -97,7 +97,8 @@
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&to 0>, <&to 2>, <&to 3>;
-        //    bindings = <&kp A>, <&kp B>, <&kp C>;
+
+            //    bindings = <&kp A>, <&kp B>, <&kp C>;
         };
 
         mt_exit_AML_on_tap: mt_exit_AML_on_tap {
@@ -110,6 +111,7 @@
         };
 
         // @（通常） / `（Shift）
+
         jp_at: jp_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -118,6 +120,7 @@
         };
 
         // :（通常） / *（Shift）
+
         jp_colon: jp_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -126,6 +129,7 @@
         };
 
         // ;（通常） / +（Shift）
+
         jp_semicolon: jp_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -134,6 +138,7 @@
         };
 
         // ^（通常） / ~（Shift）
+
         jp_caret: jp_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -142,6 +147,7 @@
         };
 
         // \（通常） / _（Shift）
+
         jp_backslash: jp_backslash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -150,6 +156,7 @@
         };
 
         // [（通常） / {（Shift）
+
         jp_lbracket: jp_lbracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -158,6 +165,7 @@
         };
 
         // ]（通常） / }（Shift）
+
         jp_rbracket: jp_rbracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -166,6 +174,7 @@
         };
 
         // ,（通常） / <（Shift）
+
         jp_comma: jp_comma {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -174,6 +183,7 @@
         };
 
         // .（通常） / >（Shift）
+
         jp_dot: jp_dot {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -182,6 +192,7 @@
         };
 
         // /（通常） / ?（Shift）
+
         jp_slash: jp_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -290,11 +301,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4      &kp N5                                            &kp N6       &kp N7    &kp N8         &kp N9                      &kp N0                      &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R       &kp T                                             &kp Y        &kp U     &kp I          &kp O                       &kp P                       &kp BSPC
-&kp CAPS   &kp A      &kp S     &kp D     &kp F       &kp G        &mkp LCLK       &mkp RCLK            &kp H        &kp J     &kp K          &kp L                       &mt_jp_colon_semicolon 0 0  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V       &kp B        &kp LEFT_SHIFT  &kp BACKSPACE        &kp N        &kp M     &mt COMMA DOT  &mt_jp_slash_backslash 0 0  &mt_jp_at_bslh 0 0          &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &td_layers  &lt 2 SPACE  &kp ESCAPE      &mt_jp_eq_caret 0 0  &lt 3 ENTER  &kp BSPC  &kp RALT       &kp LEFT_ARROW              &kp DOWN_ARROW              &kp RCTRL
+&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4      &kp N5                                          &kp N6     &kp N7    &kp N8         &kp N9                      &kp N0                      &kp BSPC
+&kp TAB    &kp Q      &kp W     &kp E     &kp R       &kp T                                           &kp Y      &kp U     &kp I          &kp O                       &kp P                       &kp BSPC
+&kp CAPS   &kp A      &kp S     &kp D     &kp F       &kp G      &mkp LCLK       &mkp RCLK            &kp H      &kp J     &kp K          &kp L                       &mt_jp_colon_semicolon 0 0  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V       &kp B      &kp LEFT_SHIFT  &kp BACKSPACE        &kp N      &kp M     &mt COMMA DOT  &mt_jp_slash_backslash 0 0  &mt_jp_at_bslh 0 0          &kp RSHFT
+&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &td_layers  &kp SPACE  &kp ESCAPE      &mt_jp_eq_caret 0 0  &kp ENTER  &kp BSPC  &kp RALT       &kp LEFT_ARROW              &kp DOWN_ARROW              &kp RCTRL
             >;
         };
 
@@ -324,7 +335,7 @@
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                  &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(F10)  &trans
 &trans  &kp F1            &kp F2            &kp F3            &kp F4            &kp F5      &trans  &trans  &kp F6            &kp F7      &kp F8      &kp F9      &kp F10      &trans
 &trans  &kp F11           &kp F12           &out OUT_USB      &out OUT_BLE      &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT     &kp GRAVE   &kp TILDE   &kp PIPE     &trans
-&trans  &trans            &trans            &trans            &kp DELETE        &kp TAB     &trans  &trans  &trans            &trans      &trans      &trans      &trans       &trans
+&trans  &trans            &trans            &trans            &td_layers        &kp TAB     &trans  &trans  &trans            &trans      &trans      &trans      &trans       &trans
             >;
         };
     };
