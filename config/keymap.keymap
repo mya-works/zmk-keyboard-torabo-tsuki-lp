@@ -286,12 +286,12 @@
         };
 
         Lang2 {
-            bindings = <&kp LANG2>;
+            bindings = <&kp LANG1>;
             key-positions = <33 34>;
         };
 
         Lang1 {
-            bindings = <&kp LANG1>;
+            bindings = <&kp LANG2>;
             key-positions = <28 27>;
         };
     };
