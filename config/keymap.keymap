@@ -6,6 +6,31 @@
 
 #define MOUSE 1
 
+// OS設定を日本語キーボードのまま使用するための変換定義
+#define JP_KP_DQUOTE       AT                // "
+#define JP_KP_AMPERSAND    CARET             // &
+#define JP_KP_QUOTE        AMPERSAND         // '
+#define JP_KP_EQUAL        UNDER             // =
+#define JP_KP_CARET        EQUAL             // ^
+#define JP_KP_YEN          0x89              // ¥
+#define JP_KP_PLUS         COLON             // +
+#define JP_KP_TILDE        PLUS              // ~
+#define JP_KP_PIPE         LS(0x89)          // |
+#define JP_KP_AT           LEFT_BRACKET      // @
+#define JP_KP_COLON        SINGLE_QUOTE      // :
+#define JP_KP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_KP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_KP_UNDERSCORE   LS(0x87)          // _
+#define JP_KP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_KP_RBRACKET     BACKSLASH         // ]
+#define JP_KP_LPAREN       ASTERISK          // (
+#define JP_KP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_KP_LBRACE       RIGHT_BRACE       // {
+#define JP_KP_RBRACE       PIPE              // }
+#define JP_KP_KANA         LANGUAGE_1        // かな
+#define JP_KP_EISU         LANGUAGE_2        // 英数
+#define JP_KP_HANZEN       GRAVE             // 半角/全角
+
 / {
     macros {
         exit_AML: exit_AML {
@@ -29,42 +54,42 @@
         maru_kakko: maru_kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
+            bindings = <&kp JP_KP_LPAREN &kp JP_KP_RPAREN>;
             label = "MARU_KAKKO";
         };
 
         kaku_kakko: kaku_kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&jp_lbracket &jp_rbracket>;
+            bindings = <&kp JP_KP_LBRACKET &kp JP_KP_RBRACKET>;
             label = "KAKU_KAKKO";
         };
 
         chu_kakko: chu_kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE>;
+            bindings = <&kp JP_KP_LBRACE &kp JP_KP_RBRACE>;
             label = "CHU_KAKKO";
         };
 
         single: single {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT &kp SQT>;
+            bindings = <&kp JP_KP_QUOTE &kp JP_KP_QUOTE>;
             label = "SINGLE";
         };
 
         double: double {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES>;
+            bindings = <&kp JP_KP_DQUOTE &kp JP_KP_DQUOTE>;
             label = "DOUBLE";
         };
 
         do: do {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE>;
+            bindings = <&kp JP_KP_BACKQUOTE &kp JP_KP_BACKQUOTE>;
             label = "DO";
         };
     };
@@ -80,7 +105,7 @@
         layer_dual: layer_dual {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";
             bindings = <&to>, <&mo>;
         };
@@ -88,7 +113,7 @@
         td_layer2_3: tap_dance_combo {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&layer_dual 0 2>, <&to 3>;
         };
 
@@ -115,7 +140,7 @@
         jp_at: jp_at {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N2 &kp GRAVE>;
+            bindings = <&kp JP_KP_AT &kp JP_KP_BACKQUOTE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -124,7 +149,7 @@
         jp_colon: jp_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SQT &kp ASTERISK>;
+            bindings = <&kp JP_KP_COLON &kp JP_KP_ASTERISK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -133,7 +158,7 @@
         jp_semicolon: jp_semicolon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SEMI &kp PLUS>;
+            bindings = <&kp SEMI &kp JP_KP_PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -142,7 +167,7 @@
         jp_caret: jp_caret {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp TILDE>;
+            bindings = <&kp JP_KP_CARET &kp JP_KP_TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -160,7 +185,7 @@
         jp_lbracket: jp_lbracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LBKT &kp LBRC>;
+            bindings = <&kp JP_KP_LBRACKET &kp JP_KP_LBRACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -169,7 +194,7 @@
         jp_rbracket: jp_rbracket {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp RBKT &kp RBRC>;
+            bindings = <&kp JP_KP_RBRACKET &kp JP_KP_RBRACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -203,7 +228,7 @@
         jp_equal: jp_equal {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp MINUS>;
+            bindings = <&kp MINUS &kp JP_KP_EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
