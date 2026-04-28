@@ -134,7 +134,7 @@
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp &kp_exit_AML>;
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
@@ -239,7 +239,7 @@
         mt_jp_colon_semicolon: mt_jp_colon_semicolon {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
             bindings = <&jp_colon &jp_semicolon>;
         };
@@ -247,7 +247,7 @@
         mt_jp_lbracket_rbracket: mt_jp_lbracket_rbracket {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
             bindings = <&jp_lbracket &jp_rbracket>;
         };
@@ -255,7 +255,7 @@
         mt_jp_slash_backslash: mt_jp_slash_backslash {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
             bindings = <&jp_slash &jp_backslash>;
         };
@@ -263,7 +263,7 @@
         mt_jp_at_bslh: mt_jp_at_bslh {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
             bindings = <&jp_at &jp_backslash>;
         };
@@ -271,7 +271,7 @@
         mt_jp_eq_bslh: mt_jp_eq_bslh {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
             bindings = <&jp_equal &jp_backslash>;
         };
@@ -279,7 +279,7 @@
         mt_jp_eq_caret: mt_jp_eq_caret {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
             bindings = <&jp_equal &jp_caret>;
         };
