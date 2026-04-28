@@ -320,11 +320,6 @@
             bindings = <&kp LANG2>;
             key-positions = <28 27>;
         };
-
-        search {
-            bindings = <&kp A>;
-            key-positions = <39 50>;
-        };
     };
 
     keymap {
