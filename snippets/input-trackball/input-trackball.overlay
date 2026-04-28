@@ -30,7 +30,7 @@
     excluded-positions = <
         33 // J
         34 // K
-        39 // （Shift）
         40 // LEFT_CONTROL
     >;
+    require-prior-idle-ms = <200>;
 };
