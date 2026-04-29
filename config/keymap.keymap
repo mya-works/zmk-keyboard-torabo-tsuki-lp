@@ -349,7 +349,7 @@
 &kp TAB    &kp Q                                      &kp W                                      &kp E         &kp R       &kp T                                         &kp Y      &kp U   &kp I          &kp O                       &kp P                       &kp BSPC
 &kp CAPS   &kp A                                      &kp S                                      &kp D         &kp F       &kp G      &mkp LCLK     &mkp RCLK            &kp H      &kp J   &kp K          &kp L                       &mt_jp_colon_semicolon 0 0  &kp SQT
 &kp LSHFT  &kp Z                                      &kp X                                      &kp C         &kp V       &kp B      &kp LEFT_ALT  &mt_jp_eq_caret 0 0  &kp N      &kp M   &mt COMMA DOT  &mt_jp_slash_backslash 0 0  &mt_jp_at_bslh 0 0          &kp RSHFT
-&kp LCTRL  &mt_exit_AML_on_tap LEFT_SHIFT LEFT_ARROW  &mt_exit_AML_on_tap LEFT_CONTROL UP_ARROW  &kp LEFT_WIN  &td_layers  &kp SPACE  &kp ESCAPE    &kp BACKSPACE        &kp ENTER  &none   &none          &kp UNDER                   &kp DOWN_ARROW              &kp RIGHT_ARROW
+&kp LCTRL  &mt_exit_AML_on_tap LEFT_SHIFT LEFT_ARROW  &mt_exit_AML_on_tap LEFT_CONTROL RIGHT_ARROW  &kp LEFT_WIN  &td_layers  &kp SPACE  &kp ESCAPE    &kp BACKSPACE        &kp ENTER  &none   &none          &kp UNDER                   &kp UP_ARROW              &kp DOWN_ARROW
             >;
         };
 
@@ -380,6 +380,15 @@
 &trans  &kp F1            &kp F2            &kp F3            &kp F4            &kp F5      &trans  &trans  &kp F6            &kp F7      &kp F8      &kp F9      &kp F10      &trans
 &trans  &kp F11           &kp F12           &out OUT_USB      &out OUT_BLE      &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT     &kp GRAVE   &kp TILDE   &kp PIPE     &trans
 &trans  &trans            &trans            &trans            &td_layers        &kp TAB     &trans  &trans  &trans            &trans      &trans      &trans      &trans       &trans
+            >;
+        };
+        layer_4 {
+            bindings = <
+&none  &none  &none  &none     &none     &none                  &none  &none     &none     &none  &none  &none
+&none  &none  &none  &none     &none     &none                  &none  &none     &none     &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none     &none     &none  &none  &none  &none  &none     &none     &none  &none  &none
+&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
         };
     };
