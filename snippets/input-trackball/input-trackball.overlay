@@ -23,16 +23,15 @@
         compatible = "zmk,input-listener";
         device = <&trackball_split>;
         status = "okay";
-        input-processors = <&zip_temp_layer 4 10000>;
 
-//        scroller {
-//            layers = <3>;
-//            input-processors = <
-//                                &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
-//                                &zip_xy_to_scroll_mapper
-//                                &zip_scroll_scaler 1 12
-//                                >;
-//        };
+        scroller {
+            layers = <3>;
+            input-processors = <
+                                &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
+                                &zip_xy_to_scroll_mapper
+                                &zip_scroll_scaler 1 12
+                                >;
+        };
     };
 
     chosen {
