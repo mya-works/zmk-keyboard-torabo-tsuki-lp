@@ -114,6 +114,14 @@
             // 追加: スクロールのタップ時間を設定 (20ms)
             tap-ms = <20>;
         };
+        WheelScroll: WheelScroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "WHEELSCROLL";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
+        };
         tog_off: toggle_layer_off {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -343,7 +351,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        default_layer {
             bindings = <
 &kp ESC    &kp N1                                     &kp N2                                     &kp N3        &kp N4      &kp N5                                        &kp N6     &kp N7  &kp N8         &kp N9                      &kp N0                      &kp BSPC
 &kp TAB    &kp Q                                      &kp W                                      &kp E         &kp R       &kp T                                         &kp Y      &kp U   &kp I          &kp O                       &kp P                       &kp BSPC
@@ -351,9 +359,10 @@
 &kp LSHFT  &kp Z                                      &kp X                                      &kp C         &kp V       &kp B      &kp LEFT_ALT  &mt_jp_eq_caret 0 0  &kp N      &kp M   &mt COMMA DOT  &mt_jp_slash_backslash 0 0  &mt_jp_at_bslh 0 0          &kp RSHFT
 &kp LCTRL  &mt_exit_AML_on_tap LEFT_SHIFT LEFT_ARROW  &mt_exit_AML_on_tap LEFT_CONTROL RIGHT_ARROW  &kp LEFT_WIN  &td_layers  &kp SPACE  &kp ESCAPE    &kp BACKSPACE        &kp ENTER  &none   &none          &kp UNDER                   &kp UP_ARROW              &kp DOWN_ARROW
             >;
+             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        layer_1 {
+        mouse_layer {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
@@ -361,9 +370,10 @@
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
+            sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        layer_2 {
+        num_layer {
             bindings = <
 &trans  &trans           &trans           &trans           &trans           &trans                                         &trans       &trans       &trans          &trans          &trans           &trans
 &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS         &kp MINUS                                      &maru_kakko  &kaku_kakko  &chu_kakko      &none           &none            &trans
@@ -371,9 +381,10 @@
 &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp EQUAL       &kp KP_NUMLOCK  &kp BACKSPACE  &none        &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans           &trans           &trans           &td_layers       &bt BT_CLR_ALL  &bt BT_NXT      &kp TAB        &kp ENTER    &none        &trans          &trans          &trans           &trans
             >;
+            sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        layer_3 {
+        function_layer {
             bindings = <
 &trans  &trans            &trans            &trans            &trans            &trans                      &trans            &trans      &trans      &trans      &trans       &trans
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                  &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(F10)  &trans
@@ -381,8 +392,9 @@
 &trans  &kp F11           &kp F12           &out OUT_USB      &out OUT_BLE      &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT     &kp GRAVE   &kp TILDE   &kp PIPE     &trans
 &trans  &trans            &trans            &trans            &td_layers        &kp TAB     &trans  &trans  &trans            &trans      &trans      &trans      &trans       &trans
             >;
+            sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
         };
-        layer_4 {
+        scroll_layer {
             bindings = <
 &none  &none  &none  &none     &none     &none                  &none  &none     &none     &none  &none  &none
 &none  &none  &none  &none     &none     &none                  &none  &none     &none     &none  &none  &none
@@ -390,6 +402,8 @@
 &none  &none  &none  &none     &none     &none  &none  &none  &none  &none     &none     &none  &none  &none
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
+            sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS) &inc_dec_kp PG_UP PG_DN>;
+
         };
     };
 };
