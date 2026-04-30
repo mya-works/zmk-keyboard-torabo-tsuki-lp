@@ -8,8 +8,8 @@
 #define DEFAULT 0
 #define NUM 1
 #define FUNCTION 2
-#define MOUSE 3
-#define SCROLL 4
+#define SCROLL 3
+#define MOUSE 4
 
 // OS設定を日本語キーボードのまま使用するための変換定義
 
@@ -37,7 +37,7 @@
 #define JP_KP_EISU         LANGUAGE_2        // 英数
 #define JP_KP_HANZEN       GRAVE             // 半角/全角
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 3 250>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 250>; };
 
 / {
     macros {
@@ -379,16 +379,6 @@
             >;
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
         };
-        mouse_layer {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-            >;
-            sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
-        };
         scroll_layer {
             bindings = <
 &none  &none  &none  &none     &none     &none                  &none  &none     &none     &none  &none  &none
@@ -398,7 +388,16 @@
 &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
             >;
             sensor-bindings = <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS) &inc_dec_kp PG_UP PG_DN>;
-
+        };
+        mouse_layer {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+            >;
+            sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
