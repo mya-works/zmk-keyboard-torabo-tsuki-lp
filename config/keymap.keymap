@@ -253,6 +253,12 @@
             bindings = <&kp MINUS &kp JP_KP_EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        jp_yen: jp_yen {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_YEN &kp PIPE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
 
         mt_jp_colon_semicolon: mt_jp_colon_semicolon {
             compatible = "zmk,behavior-hold-tap";
@@ -283,7 +289,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_at &kp JP_KP_YEN>;
+            bindings = <&jp_at &jp_yen>;
         };
 
         mt_jp_eq_bslh: mt_jp_eq_bslh {
