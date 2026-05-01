@@ -198,7 +198,7 @@
         jp_backslash: jp_backslash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BSLH &kp UNDERSCORE>;
+            bindings = <&kp BSLH &kp JP_KP_UNDERSCORE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -283,7 +283,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_at &jp_backslash>;
+            bindings = <&jp_at &kp JP_KP_YEN>;
         };
 
         mt_jp_eq_bslh: mt_jp_eq_bslh {
