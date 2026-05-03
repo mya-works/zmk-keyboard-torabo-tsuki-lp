@@ -146,7 +146,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";
-            bindings = <&to>, <&kp>;
+            bindings = <&to 4>, <&kp>;
         };
 
         //        td_layer2_3: tap_dance_combo {
