@@ -42,6 +42,16 @@
     quick-tap-ms = <0>;
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        33 // J
+        34 // K
+        39 // LEFT_SHIFT
+        40 // LEFT_CONTROL
+    >;
+    require-prior-idle-ms = <200>;
+};
+
 / {
     macros {
         exit_AML: exit_AML {
