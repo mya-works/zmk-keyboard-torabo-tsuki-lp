@@ -37,6 +37,12 @@
 #define JP_KP_EISU         LANGUAGE_2        // 英数
 #define JP_KP_HANZEN       GRAVE             // 半角/全角
 
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <0>;
+};
+
+
 / {
     macros {
         exit_AML: exit_AML {
@@ -268,7 +274,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_colon &jp_semicolon>;
+            bindings = <&jp_semicolon &jp_colon>;
         };
 
         mt_jp_lbracket_rbracket: mt_jp_lbracket_rbracket {
@@ -276,7 +282,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_lbracket &jp_rbracket>;
+            bindings = <&jp_rbracket &jp_lbracket>;
         };
 
         mt_jp_slash_backslash: mt_jp_slash_backslash {
@@ -284,7 +290,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_slash &jp_backslash>;
+            bindings = <&jp_backslash &jp_slash>;
         };
 
         mt_jp_at_bslh: mt_jp_at_bslh {
@@ -292,7 +298,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_at &jp_yen>;
+            bindings = <&jp_yen &jp_at>;
         };
 
         mt_jp_eq_bslh: mt_jp_eq_bslh {
@@ -300,7 +306,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_equal &jp_backslash>;
+            bindings = <&jp_backslash &jp_equal>;
         };
 
         mt_jp_eq_caret: mt_jp_eq_caret {
@@ -308,7 +314,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             flavor = "balanced";   // ←重要
-            bindings = <&jp_equal &jp_caret>;
+            bindings = <&jp_caret &jp_equal>;
         };
     };
 
