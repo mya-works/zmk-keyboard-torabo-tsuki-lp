@@ -49,6 +49,7 @@
         39 // LEFT_SHIFT
         40 // LEFT_CONTROL
     >;
+
     require-prior-idle-ms = <200>;
 };
 
@@ -365,6 +366,11 @@
             bindings = <&kp LANG2>;
             key-positions = <28 27>;
         };
+
+        mo-scroll {
+            bindings = <&mo 4>;
+            key-positions = <39 40>;
+        };
     };
 
     keymap {
@@ -372,11 +378,11 @@
 
         default_layer {
             bindings = <
-&none  &none                                      &none                                         &none         &none       &none                                                   &none      &none  &none          &none                       &none                       &none
-&none  &kp Q                                      &kp W                                         &kp E         &kp R       &kp T                                                   &kp Y      &kp U  &kp I          &kp O                       &kp P                       &none
-&none  &kp A                                      &kp S                                         &kp D         &kp F       &kp G      &none                   &none                &kp H      &kp J  &kp K          &kp L                       &mt_jp_colon_semicolon 0 0  &none
-&none  &kp Z                                      &kp X                                         &kp C         &kp V       &kp B      &layer_dual 4 LEFT_ALT  &mt_jp_eq_caret 0 0  &kp N      &kp M  &mt COMMA DOT  &mt_jp_slash_backslash 0 0  &mt_jp_at_bslh 0 0          &none
-&none  &mt_exit_AML_on_tap LEFT_SHIFT LEFT_ARROW  &mt_exit_AML_on_tap LEFT_CONTROL RIGHT_ARROW  &kp LEFT_WIN  &td_layers  &kp SPACE  &kp ESCAPE              &kp BACKSPACE        &kp ENTER  &none  &none          &kp UP_ARROW                &kp DOWN_ARROW              &none
+&none  &none                                      &none                                         &none         &none       &none                                         &none      &none  &none          &none                       &none                       &none
+&none  &kp Q                                      &kp W                                         &kp E         &kp R       &kp T                                         &kp Y      &kp U  &kp I          &kp O                       &kp P                       &none
+&none  &kp A                                      &kp S                                         &kp D         &kp F       &kp G      &none         &none                &kp H      &kp J  &kp K          &kp L                       &mt_jp_colon_semicolon 0 0  &none
+&none  &kp Z                                      &kp X                                         &kp C         &kp V       &kp B      &kp LEFT_ALT  &mt_jp_eq_caret 0 0  &kp N      &kp M  &mt COMMA DOT  &mt_jp_slash_backslash 0 0  &mt_jp_at_bslh 0 0          &none
+&none  &mt_exit_AML_on_tap LEFT_SHIFT LEFT_ARROW  &mt_exit_AML_on_tap LEFT_CONTROL RIGHT_ARROW  &kp LEFT_WIN  &td_layers  &kp SPACE  &kp ESCAPE    &kp BACKSPACE        &kp ENTER  &none  &none          &kp UP_ARROW                &kp DOWN_ARROW              &none
             >;
 
             sensor-bindings = <&WheelScroll SCRL_DOWN SCRL_UP &inc_dec_kp PG_UP PG_DN>;
