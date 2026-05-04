@@ -372,6 +372,11 @@
             bindings = <&mo 4>;
             key-positions = <39 40>;
         };
+
+        F3like {
+            bindings = <&kp F3>;
+            key-positions = <14 15>;
+        };
     };
 
     keymap {
