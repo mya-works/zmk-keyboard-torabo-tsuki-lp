@@ -335,7 +335,6 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
-            layers = <2>;
         };
 
         F2like {
