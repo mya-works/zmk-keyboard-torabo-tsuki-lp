@@ -48,6 +48,7 @@
         34 // K
         39 // LEFT_SHIFT
         40 // LEFT_CONTROL
+        41 // CMD
     >;
 
     require-prior-idle-ms = <200>;
