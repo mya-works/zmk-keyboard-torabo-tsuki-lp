@@ -1,3 +1,4 @@
+#include "JP_KP_defines.h"
 / {
     behaviors {
         st: scroll_tap {
