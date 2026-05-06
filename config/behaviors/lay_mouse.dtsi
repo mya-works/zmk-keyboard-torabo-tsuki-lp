@@ -1,0 +1,63 @@
+
+/ {
+    behaviors {
+
+        auto_mouse: auto_mouse {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <300>;
+            trigger-period-ms = <16>;
+        };
+
+        WheelScroll: WheelScroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "WHEELSCROLL";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
+        };
+
+        tog_off: toggle_layer_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
+        };
+
+        //layer_dual: layer_dual {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    #binding-cells = <2>;
+        //    tapping-term-ms = <250>;
+        //    flavor = "balanced";
+        //    bindings = <&to>, <&kp>;
+        //};
+
+        //        td_layer2_3: tap_dance_combo {
+        //            compatible = "zmk,behavior-tap-dance";
+        //            #binding-cells = <0>;
+        //            tapping-term-ms = <250>;
+        //            bindings = <&layer_dual 0 2>, <&to 3>;
+        //        };
+
+        td_layers: td_layers {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&to 0>, <&to 2>, <&to 3>, <&to 4>;
+
+            //    bindings = <&kp A>, <&kp B>, <&kp C>;
+        };
+
+        mt_exit_AML_on_tap: mt_exit_AML_on_tap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp &kp_exit_AML>;
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
+    };
+};

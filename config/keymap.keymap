@@ -6,7 +6,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include "U_defines.h"
-#include "behaviors.dtsi"
+#include "behaviors/lay_mouse.dtsi"
+#include "behaviors/morphs.dtsi"
+#include "behaviors/tapdance.dtsi"
 #include "macros.dtsi"
 #include "combos.dtsi"
 

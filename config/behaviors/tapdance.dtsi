@@ -1,0 +1,61 @@
+/ {
+    behaviors {
+        st: scroll_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Scroll / Tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
+        mt_jp_colon_semicolon: mt_jp_colon_semicolon {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";   // ←重要
+            bindings = <&jp_semicolon &jp_colon>;
+        };
+
+        mt_jp_lbracket_rbracket: mt_jp_lbracket_rbracket {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";   // ←重要
+            bindings = <&jp_rbracket &jp_lbracket>;
+        };
+
+        mt_jp_slash_backslash: mt_jp_slash_backslash {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";   // ←重要
+            bindings = <&jp_backslash &jp_slash>;
+        };
+
+        mt_jp_at_bslh: mt_jp_at_bslh {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";   // ←重要
+            bindings = <&jp_yen &jp_at>;
+        };
+
+        mt_jp_eq_bslh: mt_jp_eq_bslh {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";   // ←重要
+            bindings = <&jp_backslash &jp_equal>;
+        };
+
+        mt_jp_eq_caret: mt_jp_eq_caret {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "balanced";   // ←重要
+            bindings = <&jp_caret &jp_equal>;
+        };
+    };
+};
