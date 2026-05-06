@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include "JP_KP_defines.h"
-#include "macros.dtsi"
 #include "behaviors.dtsi"
+#include "macros.dtsi"
 
 #define DEFAULT 0
 #define NUM 2
