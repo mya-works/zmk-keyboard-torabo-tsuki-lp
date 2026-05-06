@@ -1,5 +1,3 @@
-#include "behaviors.dtsi"
-
 / {
     macros {
         exit_AML: exit_AML {
