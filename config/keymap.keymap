@@ -130,6 +130,13 @@
             hold-while-undecided;
         };
 
+        md: tap_and_Shift{
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         auto_mouse: auto_mouse {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
