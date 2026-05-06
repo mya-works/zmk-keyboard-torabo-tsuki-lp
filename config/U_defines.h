@@ -1,5 +1,11 @@
 // OS設定を日本語キーボードのまま使用するための変換定義
 
+#define DEFAULT 0
+#define NUM 2
+#define FUNCTION 3
+#define SCROLL 4
+#define MOUSE 1
+
 #define JP_KP_DQUOTE       AT                // "
 #define JP_KP_AMPERSAND    CARET             // &
 #define JP_KP_QUOTE        AMPERSAND         // '
