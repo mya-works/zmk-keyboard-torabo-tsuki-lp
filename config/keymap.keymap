@@ -130,7 +130,7 @@
             hold-while-undecided;
         };
 
-        md: tap_and_Shift{
+        md: tap_Shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
