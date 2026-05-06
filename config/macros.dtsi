@@ -1,0 +1,63 @@
+/ {
+    macros {
+        exit_AML: exit_AML {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off MOUSE>;
+            label = "exit_AML";
+        };
+
+        kp_exit_AML: kp_exit_AML {
+            compatible = "zmk,behavior-macro-one-param";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
+            label = "KP_exit_AML";
+        };
+
+        maru_kakko: maru_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_LPAREN &kp JP_KP_RPAREN>;
+            label = "MARU_KAKKO";
+        };
+
+        kaku_kakko: kaku_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_LBRACKET &kp JP_KP_RBRACKET>;
+            label = "KAKU_KAKKO";
+        };
+
+        chu_kakko: chu_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_LBRACE &kp JP_KP_RBRACE>;
+            label = "CHU_KAKKO";
+        };
+
+        single: single {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_QUOTE &kp JP_KP_QUOTE>;
+            label = "SINGLE";
+        };
+
+        double: double {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_DQUOTE &kp JP_KP_DQUOTE>;
+            label = "DOUBLE";
+        };
+
+        do: do {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp JP_KP_BACKQUOTE &kp JP_KP_BACKQUOTE>;
+            label = "DO";
+        };
+    };
+};

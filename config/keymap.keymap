@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "macros.dtsi"
 
 #define DEFAULT 0
 #define NUM 2
@@ -56,68 +57,6 @@
 };
 
 / {
-    macros {
-        exit_AML: exit_AML {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <0>;
-            bindings = <&tog_off MOUSE>;
-            label = "exit_AML";
-        };
-
-        kp_exit_AML: kp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
-            label = "KP_exit_AML";
-        };
-
-        maru_kakko: maru_kakko {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KP_LPAREN &kp JP_KP_RPAREN>;
-            label = "MARU_KAKKO";
-        };
-
-        kaku_kakko: kaku_kakko {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KP_LBRACKET &kp JP_KP_RBRACKET>;
-            label = "KAKU_KAKKO";
-        };
-
-        chu_kakko: chu_kakko {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KP_LBRACE &kp JP_KP_RBRACE>;
-            label = "CHU_KAKKO";
-        };
-
-        single: single {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KP_QUOTE &kp JP_KP_QUOTE>;
-            label = "SINGLE";
-        };
-
-        double: double {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KP_DQUOTE &kp JP_KP_DQUOTE>;
-            label = "DOUBLE";
-        };
-
-        do: do {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp JP_KP_BACKQUOTE &kp JP_KP_BACKQUOTE>;
-            label = "DO";
-        };
-    };
-
     behaviors {
         st: scroll_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -128,13 +67,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
-        };
-
-        md: tap_Shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         auto_mouse: auto_mouse {
