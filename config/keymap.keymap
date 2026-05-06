@@ -8,7 +8,7 @@
 #include "U_defines.h"
 #include "behaviors.dtsi"
 #include "macros.dtsi"
-
+#include "combos.dtsi"
 
 &mt {
     flavor = "balanced";
@@ -28,50 +28,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <28 29>;
-        };
-
-        F2like {
-            bindings = <&kp F2>;
-            key-positions = <13 14>;
-        };
-
-        F7like {
-            bindings = <&kp F7>;
-            key-positions = <19 20>;
-        };
-
-        F10like {
-            bindings = <&kp F10>;
-            key-positions = <21 20>;
-        };
-
-        Delete {
-            bindings = <&kp DELETE>;
-            key-positions = <22 21>;
-        };
-
-        Lang2 {
-            bindings = <&kp LANG1>;
-            key-positions = <33 34>;
-        };
-
-        Lang1 {
-            bindings = <&kp LANG2>;
-            key-positions = <28 27>;
-        };
-
-        F3like {
-            bindings = <&kp F3>;
-            key-positions = <14 15>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
