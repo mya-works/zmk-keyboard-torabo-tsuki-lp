@@ -1,6 +1,7 @@
 / {
     combos {
         compatible = "zmk,combos";
+        timeout-ms = <70>
 
         bt_clear {
             bindings = <&bt BT_CLR>;
