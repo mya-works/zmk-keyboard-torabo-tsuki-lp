@@ -1,44 +1,51 @@
 / {
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <70>;
 
         bt_clear {
+            timeout-ms = <70>;
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
         };
 
         F2like {
+            timeout-ms = <70>;
             bindings = <&kp F2>;
             key-positions = <13 14>;
         };
 
         F7like {
+            timeout-ms = <70>;
             bindings = <&kp F7>;
             key-positions = <19 20>;
         };
 
         F10like {
+            timeout-ms = <70>;
             bindings = <&kp F10>;
             key-positions = <21 20>;
         };
 
         Delete {
+            timeout-ms = <70>;
             bindings = <&kp DELETE>;
             key-positions = <22 21>;
         };
 
         Lang2 {
+            timeout-ms = <70>;
             bindings = <&kp LANG1>;
             key-positions = <33 34>;
         };
 
         Lang1 {
+            timeout-ms = <70>;
             bindings = <&kp LANG2>;
             key-positions = <28 27>;
         };
 
         F3like {
+            timeout-ms = <70>;
             bindings = <&kp F3>;
             key-positions = <14 15>;
         };

@@ -1,9 +1,9 @@
 / {
     behaviors {
-        compatible = "zmk,behavior-hold-tap";
         hold-trigger-on-release; 
         
         st: scroll_tap {
+            compatible = "zmk,behavior-hold-tap";
             label = "Scroll / Tap";
             bindings = <&mo>, <&kp>;
 
@@ -13,6 +13,7 @@
             hold-while-undecided;
         };
         mt_jp_colon_semicolon: mt_jp_colon_semicolon {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             quick-tap-ms = <0>;
@@ -21,6 +22,7 @@
         };
 
         mt_jp_lbracket_rbracket: mt_jp_lbracket_rbracket {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             quick-tap-ms = <0>;
@@ -29,6 +31,7 @@
         };
 
         mt_jp_slash_backslash: mt_jp_slash_backslash {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             quick-tap-ms = <0>;
@@ -37,6 +40,7 @@
         };
 
         mt_jp_at_bslh: mt_jp_at_bslh {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             quick-tap-ms = <0>;
@@ -45,6 +49,7 @@
         };
 
         mt_jp_eq_bslh: mt_jp_eq_bslh {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             quick-tap-ms = <0>;
@@ -53,6 +58,7 @@
         };
 
         mt_jp_eq_caret: mt_jp_eq_caret {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             quick-tap-ms = <0>;
