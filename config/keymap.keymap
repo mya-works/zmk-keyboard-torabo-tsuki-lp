@@ -32,30 +32,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        kari {
-            bindings = <&none>;
-            key-positions = <13 17>;
-        };
-
-        kari2 {
-            bindings = <&none>;
-            key-positions = <53 58>;
-        };
-
-        kari3 {
-            bindings = <&none>;
-            key-positions = <18 22>;
-        };
-
-        kari4 {
-            bindings = <&none>;
-            key-positions = <59 64>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 

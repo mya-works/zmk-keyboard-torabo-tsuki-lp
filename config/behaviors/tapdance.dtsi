@@ -1,6 +1,5 @@
 / {
     behaviors {
-        hold-trigger-on-release; 
         
         st: scroll_tap {
             compatible = "zmk,behavior-hold-tap";
