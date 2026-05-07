@@ -1,21 +1,19 @@
 / {
     behaviors {
+        hold-trigger-on-release; 
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        flavor = "balanced";
+        
         st: scroll_tap {
-            compatible = "zmk,behavior-hold-tap";
             label = "Scroll / Tap";
             bindings = <&mo>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
             hold-while-undecided;
         };
         mt_jp_colon_semicolon: mt_jp_colon_semicolon {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
             quick-tap-ms = <0>;
-            tapping-term-ms = <200>;
             bindings = <&jp_semicolon &jp_colon>;
         };
 
