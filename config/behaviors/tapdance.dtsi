@@ -1,9 +1,9 @@
 / {
     behaviors {
         hold-trigger-on-release; 
+            compatible = "zmk,behavior-hold-tap";
         
         st: scroll_tap {
-            compatible = "zmk,behavior-hold-tap";
             label = "Scroll / Tap";
             bindings = <&mo>, <&kp>;
 
