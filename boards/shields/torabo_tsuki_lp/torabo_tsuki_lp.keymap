@@ -1,11 +1,2 @@
-// test
-#include "../../../config/U_defines.h"
-#include "../../../config/behaviors/lay_mouse.dtsi"
-#include "../../../config/behaviors/morphs.dtsi"
-#include "../../../config/behaviors/tapdance.dtsi"
-#include "../../../config/combos.dtsi"
-#include "../../../config/input_processors.dtsi"
-#include "../../../config/macros.dtsi"
-// test
 
 #include "../../../config/keymap.keymap"
