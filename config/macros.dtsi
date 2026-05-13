@@ -59,5 +59,28 @@
             bindings = <&kp JP_KP_BACKQUOTE &kp JP_KP_BACKQUOTE>;
             label = "DO";
         };
+         // ■ プロファイル1番 (BT_SEL 0) 用: 1回点滅
+        bt_sel_0: bt_sel_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>; // 点滅の速度調整（150ミリ秒隔）
+            tap-ms = <150>;
+            bindings
+                = <&bt BT_SEL 0>
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                ;
+        };
+         // ■ プロファイル1番 (BT_SEL 0) 用: 1回点滅
+        bt_sel_1: bt_sel_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <150>; // 点滅の速度調整（150ミリ秒隔）
+            tap-ms = <150>;
+            bindings
+                = <&bt BT_SEL 0>
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                ;
+        };
     };
 };
