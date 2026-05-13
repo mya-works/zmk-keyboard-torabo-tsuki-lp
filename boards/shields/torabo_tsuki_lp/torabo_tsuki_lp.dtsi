@@ -83,6 +83,11 @@
         led = <&status_led>;
     };
 
+    backlight {
+        compatible = "gpio-backlight";
+        label = "Macro LED";
+        gpios = <&bmp 2 GPIO_ACTIVE_HIGH>; 
+    };
     bootloader_trigger: bootloader_trigger {
         compatible = "zmk,cdc-acm-bootloader-trigger";
     };
