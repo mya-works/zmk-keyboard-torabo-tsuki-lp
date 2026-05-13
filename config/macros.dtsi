@@ -66,21 +66,34 @@
         bt_sel_0: bt_sel_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <150>; // 点滅の速度調整（150ミリ秒隔）
-            tap-ms = <150>;
+            wait-ms = <100>; // 点滅の速度調整（150ミリ秒隔）
+            tap-ms = <200>;
             bindings
                 = <&bt BT_SEL 0>
                 , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
                 ;
         };
-         // ■ プロファイル1番 (BT_SEL 0) 用: 1回点滅
+         // ■ プロファイル2番 (BT_SEL 1) 用: 2回点滅
         bt_sel_1: bt_sel_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <150>; // 点滅の速度調整（150ミリ秒隔）
-            tap-ms = <150>;
+            wait-ms = <100>; // 点滅の速度調整（150ミリ秒隔）
+            tap-ms = <200>;
             bindings
-                = <&bt BT_SEL 0>
+                = <&bt BT_SEL 1>
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                ;
+        };
+         // ■ プロファイル3番 (BT_SEL 2) 用: 3回点滅
+        bt_sel_2: bt_sel_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>; // 点滅の速度調整（150ミリ秒隔）
+            tap-ms = <200>;
+            bindings
+                = <&bt BT_SEL 2>
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
                 , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
                 , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
                 ;
