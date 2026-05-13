@@ -1,3 +1,6 @@
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/backlight.h>
+
 / {
     macros {
         exit_AML: exit_AML {
