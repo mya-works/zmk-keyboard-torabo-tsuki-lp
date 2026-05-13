@@ -98,5 +98,19 @@
                 , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
                 ;
         };
+         // ■ プロファイル4番 (BT_SEL 3) 用: 4回点滅
+        bt_sel_3: bt_sel_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <100>; // 点滅の速度調整（150ミリ秒隔）
+            tap-ms = <200>;
+            bindings
+                = <&bt BT_SEL 3>
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                , <&bl BL_TOG>, <&bl BL_TOG> // ONになってOFFになる（1回点滅）
+                ;
+        };
     };
 };
