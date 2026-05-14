@@ -62,8 +62,8 @@
         num_layer {
             bindings = <
 &trans  &trans           &trans           &trans           &trans           &trans                                   &trans       &trans       &trans          &trans          &trans           &trans
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS         &kp MINUS                                &maru_kakko  &kaku_kakko  &chu_kakko      &none           &none            &trans
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK     &kp SLASH       &trans          &trans   &single      &double      &do             &kp UP_ARROW    &none            &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS         &kp MINUS                                &maru_kakko  &kaku_kakko  &chu_kakko      &none           &jp_lbracket     &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK     &kp SLASH       &trans          &trans   &single      &double      &do             &kp UP_ARROW    &jp_rbracket      &trans
 &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_NUMLOCK  &lt 5 LEFT_ALT  &kp TAB  &none        &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans  &trans           &trans           &trans           &td_layers       &trans          &trans          &trans   &kp ENTER    &none        &trans          &trans          &trans           &trans
             >;
